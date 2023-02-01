@@ -46,3 +46,21 @@
 .is-big {
   font-size: 25px;
 }
+
+
+#q3{
+  color: white;
+}
+
+#q3.red{
+  color: red;
+}
+
+#q2{
+  color: white;
+}
+
+#q2.red{
+  color: black;
+  background-color: red;
+}
