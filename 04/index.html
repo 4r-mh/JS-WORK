@@ -30,29 +30,29 @@
 
   const wrapper = document.getElementById("wrapper");
 
-  // 1~100の数字で
-  for( let i = 1; i <= 100; i ++ ) {
+    // 1~100の数字で
+    for( let i = 1; i <= 100; i ++ ) {
 
-  // ③ 3の倍数かつ5の倍数の場合、FizzBuzzと表示
-    if( i % 15 === 0 ) {
+    // ③ 3の倍数かつ5の倍数の場合、FizzBuzzと表示
+      if( i % 15 === 0 ) {
 
-      // wrapperにどんどん挿入していく
-      // afterbegin:タグの中の末尾に挿入（afterbegin:先頭だと、1から始めているから１００が先頭になってしまうのでだめ。）
-      wrapper.insertAdjacentHTML("beforeend", "FizzBuzz<br>");
+        // wrapperにどんどん挿入していく
+        // afterbegin:タグの中の末尾に挿入（afterbegin:先頭だと、1から始めているから１００が先頭になってしまうのでだめ。）
+        wrapper.insertAdjacentHTML("beforeend", "FizzBuzz<br>");
 
-   // ① 3の倍数の場合、Fizzと表示
-    } else if ( i % 3 === 0 ) {
-      wrapper.insertAdjacentHTML("beforeend", "Fizz<br>");
+    // ① 3の倍数の場合、Fizzと表示
+      } else if ( i % 3 === 0 ) {
+        wrapper.insertAdjacentHTML("beforeend", "Fizz<br>");
 
-    // ② 5の倍数の場合、Buzzと表示
-    } else if ( i % 5 === 0 ) {
-      wrapper.insertAdjacentHTML("beforeend", "Buzz<br>");
+      // ② 5の倍数の場合、Buzzと表示
+      } else if ( i % 5 === 0 ) {
+        wrapper.insertAdjacentHTML("beforeend", "Buzz<br>");
 
-    // ④ それ以外の場合、数字を表示
-    } else {
-      wrapper.insertAdjacentHTML("beforeend", i+"<br>");
+      // ④ それ以外の場合、数字を表示
+      } else {
+        wrapper.insertAdjacentHTML("beforeend", i+"<br>");
+      }
     }
-  }
 
 </script>
 </body>
