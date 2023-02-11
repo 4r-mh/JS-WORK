@@ -42,38 +42,41 @@
    * falseの場合
    * 何もしない
    */
-  const q1 = document.getElementById('q1');
+
+
+    const q1 = document.getElementById('q1');
 
     q1.addEventListener('click', () => {
     
         const v = window.confirm('年代を確認しますか？');
 
         if( v === true ) {
-          let age = window.prompt("年齢を入力してください", "0");
-          if(0 <= age <= 1){
-            alert(`${age}歳のあなたは乳児でちゅ。`);
-          }else if(2 <= age <= 6){
-            alert(`${age}歳のあなたは幼児でしゅ。`);
-          }else if(7 <= age <= 12){
-            alert(`${age}歳のあなたは小学生だよ。`);
-          }else if(13 <= age <= 15){
-            alert(`${age}歳のあなたは中学生だぜ。`);
-          }else if(16 <= age <= 18){
-            alert(`${age}歳のあなたは高校生っす。`);
-          }else if(19 <= age <= 22){
-            alert(`${age}歳のあなたは大学生です。`);
-          }else if(23 <= age <= 59){
-            alert(`${age}歳のあなたは社会人でございます。`);
-          }else if(60 <= age <= 99){
-            alert(`${age}歳のあなたは高齢者じゃ。`);
+          const age = window.prompt('年齢を入力してください');
+          if(age == null || age == ''){
+            alert(`ちゃんといれてください。`);
           }else if(100 <= age){
             alert(`すごい。`);
+          }else if(60 <= age){
+            alert(`${age}歳のあなたは高齢者じゃ。`);
+          }else if(23 <= age){
+            alert(`${age}歳のあなたは社会人でございます。`);
+          }else if(19 <= age){
+            alert(`${age}歳のあなたは大学生です。`);
+          }else if(16 <= age){
+            alert(`${age}歳のあなたは高校生っす。`);
+          }else if(13 <= age){
+            alert(`${age}歳のあなたは中学生だぜ。`);
+          }else if(7 <= age){
+            alert(`${age}歳のあなたは小学生だよ。`);
+          }else if(2 <= age){
+            alert(`${age}歳のあなたは幼児でしゅ。`);
+          }else if(0 <= age){
+            alert(`${age}歳のあなたは乳児でちゅ。`);
           }else{
             alert(`ちゃんといれてください。`);
           }
         }
     });
-
 
   // 第2問 id="q2"の要素をクリックしたらfor文を用いて、12345678910という文字列を作り、#q2の後にその文字列を挿入せよ。
   const q2 = document.getElementById('q2');
@@ -144,23 +147,53 @@
    * 但し、コールバック関数は１つで実装すること。
    * 必要に応じて、要素に属性などは追加して良いものとします。
    */
-  const q6 = document.getElementById('q6');
-  const q7 = document.getElementById('q7');
-  const color = document.querySelectorAll('.color');
-  q6.addEventListener('click',  () => {
-    color.forEach(function(e){
-      e.style.color = "red";
-    });
-  });
 
-  q7.addEventListener('click',  () => {
-    color.forEach(function(e){
-      e.style.color = "blue";
-    });
-  });
+  
+  // const q6 = document.getElementById('q6');
+  // const q7 = document.getElementById('q7');
+  // const color = document.querySelectorAll('.color');
+  // q6.addEventListener('click',  () => {
+  //   color.forEach(function(e){
+  //     e.style.color = "red";
+  //   });
+  // });
+
+  // q7.addEventListener('click',  () => {
+  //   color.forEach(function(e){
+  //     e.style.color = "blue";
+  //   });
+  // });
     
 
+  // const q6 = document.getElementById('q6');
+  // const q7 = document.getElementById('q7');
+  // const color = document.querySelectorAll('.color');
+  // q6.addEventListener('click',  () => {
+  //   color.forEach(function(e){
+  //     e.style.color = "red";
+  //   });
+  // });
 
+  // q7.addEventListener('click',  () => {
+  //   color.forEach(function(e){
+  //     e.style.color = "blue";
+  //   });
+  // });
+    
+  const q6 = document.getElementById('q6');
+  const q7 = document.getElementById('q7');
+    const color = document.querySelectorAll('.color');
+
+  const change= function (id,textcolor){
+    id.addEventListener('click',  () => {
+      color.forEach(function(e){
+      e.style.color = textcolor;
+    });
+  });
+    }
+
+  change(q6,"red");
+  change(q7,"blue");
 
 </script>
 </body>
